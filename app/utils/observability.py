@@ -41,7 +41,7 @@ class Observability():
             "service.name": "sample_pr"
         })
 
-        self.__endpoint = "http://ob-grpc-nlb-39f239ed93149806.elb.ap-northeast-1.amazonaws.com:4317"
+        self.__endpoint = "http://XXXXXXXXXXXXXXXXXXXXXXXXX.elb.ap-northeast-1.amazonaws.com:4317"
 
         self.__init_logging()
         self.__init_trace()
