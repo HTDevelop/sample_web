@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=no"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sample Work History" />
+    <!-- <meta property='og:url' content='ToDo'> -->
+    <meta property="og:description" content="Sample Work History" />
+    <meta property="og:image" content="{{ url_for('static', filename='img/ogp.png') }}" />
+    <meta name="description" content="Sample Work History" />
+    <title>Sample Work History</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:700"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='css/reset.css') }}"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{{ url_for('static', filename='css/style.css') }}"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <!-- <link rel=”canonical” href="ToDo" /> -->
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <nav id="gnav" class="fixed">
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <header id="header">
+        <div class="inner">
+          <h1 class="logo">
+            <div class="logo-title">Sample</div>
+            <div class="logo-desc">HISTORY</div>
+          </h1>
+        </div>
+      </header>
+      <main id="contents">
+        <section class="section" id="about">
+          <div class="inner">
+            <div class="section-title-area">
+              <h2 class="section-title">ABOUT</h2>
+              <div class="section-intro">
+                ペンギン
+                <br />
+                2023年5月11日生　満2歳　
+              </div>
+            </div>
+            <div class="section-body">
+              <div class="section-image">
+                <img class="lazyload fadein" data-src="{{ url_for('static', filename='img/about/profile.jpg') }}" alt="">
+              </div>
+              <div class="section-desc">
+                <div class="section-text">
+                  ～～～～～～～～～～～～～～～～
+                  <br />
+                  <br />～～～～～～～～～～～～～～～～
+                  <br />～～～～～～～～～～～～～～～～
+                  <br />～～～～～～～～～～～～～～～～
+                  <br />
+                  <br />～～～～～～～～～～～～～～～～
+                  <br />～～～～～～～～～～～～～～～～
+                  <br />
+                  <br />～～～～～～～～～～～～～～～～
+                </div>
+              </div>
+            </div>
+            <div class="section-sub-title-area">
+              <h3 class="section-sub-title">応援メッセージ</h3>
+            </div>
+            <div id="support-msg-area">
+              <ul class="slider"></ul>
+            </div>
+            <div id="support-msg-loader-container">
+              <div class="loader"></div>
+            </div>
+            <form id="support-msg-form">
+              <textarea
+                id="messageContent"
+                placeholder="メッセージを入力"
+                name="messageContent"
+              ></textarea>
+              <div id="submited-msg"></div>
+              <button type="submit">送信</button>
+            </form>
+          </div>
+        </section>
+        <section class="section" id="skills">
+          <div class="inner">
+            <div class="section-title-area">
+              <h2 class="section-title">SKILLS</h2>
+              <div class="section-sub-title-area">
+                <h3 class="section-sub-title">TECHNICAL SKILLS</h3>
+              </div>
+              <div class="section-intro">言語や基盤技術</div>
+            </div>
+            <div class="section-body card-wrapper">
+              <div class="tec_card">
+                <div class="skills-icon">
+                  <img src="{{ url_for('static', filename='img/skills/python.png') }}" alt="" />
+                </div>
+              </div>
+              <div class="tec_card">
+                <div class="skills-icon">
+                  <img
+                    src="{{ url_for('static', filename='img/skills/javaicon.png') }}"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="tec_card">
+                <div class="skills-icon">
+                  <img src="{{ url_for('static', filename='img/skills/cplus.png') }}" alt="" />
+                </div>
+              </div>
+              <div class="tec_card">
+                <div class="skills-icon">
+                  <img src="{{ url_for('static', filename='img/skills/CSharp.png') }}" alt="" />
+                </div>
+              </div>
+              <div class="tec_card">
+                <div class="skills-icon">
+                  <img src="{{ url_for('static', filename='img/skills/aws.webp') }}" alt="" />
+                </div>
+              </div>
+              <div class="tec_card">
+                <div class="skills-icon">
+                  <img src="{{ url_for('static', filename='img/skills/gcp.png') }}" alt="" />
+                </div>
+              </div>
+              <div class="tec_card">
+                <div class="skills-icon">
+                  <img src="{{ url_for('static', filename='img/skills/linux.png') }}" alt="" />
+                </div>
+              </div>
+              <div class="tec_card">
+                <div class="skills-icon">
+                  <img
+                    src="{{ url_for('static', filename='img/skills/terraform_ansible.png') }}"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="tec_card">
+                <div class="skills-icon">
+                  <img src="{{ url_for('static', filename='img/skills/oracle.png') }}" alt="" />
+                </div>
+              </div>
+
+              <div class="tec_card">
+                <div class="skills-icon">
+                  <img src="{{ url_for('static', filename='img/skills/html.png') }}" alt="" />
+                </div>
+              </div>
+
+
+              <div class="tec_card">
+                <div class="skills-icon">
+                  <img src="{{ url_for('static', filename='img/skills/js.png') }}" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        <section class="section" id="contact">
+          <div class="inner">
+            <div class="section-title-area">
+              <h2 class="section-title">CONTACT</h2>
+              <div class="section-intro"></div>
+            </div>
+            <div class="section-body contact-wrapper">
+              <div class="contact-list">
+                <div class="contact-other">aaaaaaaa@aaaaaaaaaa.com</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer id="footer">
+        <div class="pageTop">
+          <div id="js-pageTop">Page Top</div>
+        </div>
+        <div class="inner"></div>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='js/lazysizes/lazysizes.min.js') }}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+  </body>
+</html>

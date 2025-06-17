@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+
+# 作業ディレクトリ作成
+WORKDIR /app
+
+# 依存関係インストール
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# アプリコードをコピー
+COPY . .
+
+# ポートを開放（ALBはこのポートをターゲットにする）
+EXPOSE 5000
+
+# 本番用にGunicornで起動
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "-w", "4", "-t", "60", "--access-logfile", "-", "app:app"]
