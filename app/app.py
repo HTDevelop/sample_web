@@ -37,14 +37,10 @@ def post_support_msg():
             return jsonify({"message": "メッセージを入力してください"}), 400
 
     with ob.tracer.start_as_current_span("post_dynamodb") as span:
-        try:
-            db = DynamoDB()
-            db.put_support_msg(msg)
-            return jsonify({"message": "メッセージありがとうございました！"}), 200
-        except Exception as e:
-            span.record_exception(e)
-            span.set_status(Status(StatusCode.ERROR, str(e)))
-            return jsonify({"message": "送信エラー 時間を置いてから再度送信してください"}), 500
+        raise Exception("DynamoDBへ接続失敗しました。")
+        db = DynamoDB()
+        db.put_support_msg(msg)
+        return jsonify({"message": "メッセージありがとうございました！"}), 200
 
 @app.route("/api/support_msg", methods=["GET"])
 def get_support_msg():
